@@ -1,0 +1,6 @@
+@Ligonine_HostAddress = http://localhost:5037
+
+GET {{Ligonine_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

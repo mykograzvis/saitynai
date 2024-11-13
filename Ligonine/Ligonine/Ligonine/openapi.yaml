@@ -1,0 +1,374 @@
+openapi: 3.0.0
+info:
+  title: Example API
+  description: An example API department, doctor, and operation resources
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:7199
+
+paths:
+  /departments:
+    get:
+      summary: Get a list of departments
+      tags:
+        - department
+      operationId: GetDepartments
+      responses:
+        "200":
+          description: A list of departments
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Department"
+              example:
+                - id: 1
+                  name: "Cardiology"
+                  description: "Department for heart-related conditions"
+                - id: 2
+                  name: "Oncologick"
+                  description: "Oncologic illness Department"
+    post:
+      description: "Create a department"
+      tags:
+        - department
+      operationId: PostDepartment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateDepartmentRequest"
+            example:
+              -   "name": "Cardiology"
+                  "description": "Department for heart-related conditions"
+      responses:
+        "201":
+          $ref: "#/components/responses/sigleDepartment"
+        "400":
+          $ref: "#/components/responses/badRequest"
+        "422":
+          $ref: "#/components/responses/unprocessableEntity"
+
+  /departments/{departmentId}:
+    parameters:
+      - $ref: '#/components/parameters/departmentId'
+    get:
+      summary: Get a department by ID
+      tags:
+        - department
+      operationId: GetDepartment
+      responses:
+        "200":
+          $ref: "#/components/responses/sigleDepartment"
+        "404":
+          $ref: "#/components/responses/notFound"
+    put:
+      summary: Update a department by ID
+      tags:
+        - department
+      operationId: PutDepartment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateDepartmentRequest"
+            example:
+              -   "id": 5
+                  "name": "Oncologick"
+                  "description": "Oncologic illness Department"
+      responses:
+        "204":
+          $ref: "#/components/responses/sigleDepartment"
+        "400":
+          $ref: "#/components/responses/badRequest"
+        "404":
+          $ref: "#/components/responses/notFound"
+        "422":
+          $ref: "#/components/responses/unprocessableEntity"
+    delete:
+      summary: Delete a department by ID
+      tags:
+        - department
+      operationId: DeleteDepartment
+      responses:
+        "404":
+          $ref: "#/components/responses/notFound"
+        "204":
+          description: Department deleted
+  /departments/{departmentId}/doctors:
+    parameters:
+      - $ref: '#/components/parameters/departmentId'
+    get:
+      summary: Get doctors for a department
+      tags:
+        - doctor
+      operationId: GetDoctors
+      responses:
+        "200":
+          description: List of doctors
+    post:
+      description: 'Add a doctor'
+      tags:
+        - doctors
+      operationId: PostDoctor
+      responses:
+        "400":
+          $ref: "#/components/responses/badRequest"
+        "422":
+          $ref: "#/components/responses/unprocessableEntity"
+        '201':
+          description: Created
+  /departments/{departmentId}/doctors/{doctorId}:
+    parameters:
+      - $ref: '#/components/parameters/departmentId'
+      - $ref: '#/components/parameters/doctorId'
+    get:
+      summary: Get a specific doctor for a department
+      tags:
+        - doctor
+      operationId: GetDoctor
+      responses:
+        "200":
+          description: A single doctor
+        "404":
+          $ref: "#/components/responses/notFound"
+    put:
+      summary: Update a doctor for a department
+      tags:
+        - doctor
+      operationId: PutDoctor
+      responses:
+        "204":
+          description: Updated doctor
+        "400":
+          $ref: "#/components/responses/badRequest"
+        "404":
+          $ref: "#/components/responses/notFound"
+    delete:
+      summary: Delete a doctor for a department
+      tags:
+        - doctor
+      operationId: DeleteDoctor
+      responses:
+        "204":
+          description: Doctor deleted
+        "404":
+          $ref: "#/components/responses/notFound"
+  /departments/{departmentId}/doctors/{doctorId}/operations:
+    parameters:
+      - $ref: '#/components/parameters/departmentId'
+      - $ref: '#/components/parameters/doctorId'
+    get:
+      summary: Get operations for a specific doctor
+      tags:
+        - operation
+      operationId: GetOperations
+      responses:
+        "200":
+          description: List of operations
+    post:
+      description: "Add an operation for a specific doctor"
+      tags:
+        - operation
+      operationId: PostOperation
+      responses:
+        "201":
+          description: Created
+        "400":
+          $ref: "#/components/responses/badRequest"
+        "422":
+          $ref: "#/components/responses/unprocessableEntity"
+  /departments/{departmentId}/doctors/{doctorId}/operations/{operationId}:
+    parameters:
+      - $ref: '#/components/parameters/departmentId'
+      - $ref: '#/components/parameters/doctorId'
+      - $ref: '#/components/parameters/operationId'
+    get:
+      summary: Get a specific operation
+      tags:
+        - operation
+      operationId: GetOperation
+      responses:
+        "200":
+          description: A single operation
+        "404":
+          $ref: "#/components/responses/notFound"
+    put:
+      summary: Update an operation
+      tags:
+        - operation
+      operationId: PutOperation
+      responses:
+        "204":
+          description: Updated operation
+        "400":
+          $ref: "#/components/responses/badRequest"
+        "404":
+          $ref: "#/components/responses/notFound"
+    delete:
+      summary: Delete an operation
+      tags:
+        - operation
+      operationId: DeleteOperation
+      responses:
+        "204":
+          description: Operation deleted
+        "404":
+          $ref: "#/components/responses/notFound"
+components:
+  schemas:
+    Department:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+    CreateDepartmentRequest:
+      type: object
+      required:
+        - name
+        - description
+      properties:
+        name:
+          minLength: 5
+          maxLength: 280
+          type: string
+        description:
+          minLength: 5
+          maxLength: 280
+          type: string
+    UpdateDepartmentRequest:
+      type: object
+      properties:
+        name:
+          minLength: 5
+          maxLength: 280
+          type: string
+        description:
+          minLength: 5
+          maxLength: 280
+          type: string
+        id:
+          type: integer
+    Doctor:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        age:
+          type: integer
+        bloodType:
+          type: string
+        departmentId:
+          type: integer
+    Operation:
+      type: object
+      properties:
+        id:
+          type: integer
+        doctorId:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+    problemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          format: uri
+          description: A URI reference that identifies the problem type.
+        title:
+          type: string
+          description: A short, human-readable summary of the problem type.
+        status:
+          type: integer
+          format: int32
+          description: The HTTP status code applicable to this problem.
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+        instance:
+          type: string
+          format: uri
+          description: A URI reference that identifies the specific occurrence of the problem.
+        errors:
+          type: object
+          description: A map of detailed errors for every property ([property => error])
+  responses:
+    sigleDepartment:
+      description: A department
+      content:
+        application/json:
+          schema:
+            type: object
+            items:
+              $ref: "#/components/schemas/department"
+          example:
+            - id: 1
+              name: "Cardiology"
+              description: "Department for heart-related conditions"
+    unprocessableEntity:
+      description: Unprocessable entity response
+      content:
+        application/problem+json:
+          schema:
+            type: object
+            items:
+              $ref: "#/components/schemas/problemDetails"
+          example:
+            type: "https://tools.ietf.org/html/rfc4918#section-11.2"
+            title: "Unprocessable Entity"
+            status: 422
+            errors:
+              Name:
+                - "'Name' must not be empty."
+    badRequest:
+      description: Bad request response
+    notFound:
+      description: Resource was not found
+  parameters:
+    departmentId:
+      name: departmentId
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+      description: The unique identifier of the department
+    doctorId:
+      name: doctorId
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+      description: The unique identifier of the doctor
+    operationId:
+      name: operationId
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+      description: The unique identifier of the operation
+  
+tags:
+  - name: department
+    description: Operations related to departments
+  - name: doctor
+    description: Operations related to doctors
+  - name: operation
+    description: Operations related to operations
+
+externalDocs:
+  description: Find more info here
+  url: https://example.com/docs
