@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj": {}
+    "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj": {
+    "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj",
+        "projectUniqueName": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj",
         "projectName": "Ligonine",
-        "projectPath": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj",
-        "packagesPath": "C:\\Users\\mykog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\obj\\",
+        "projectPath": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj",
+        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mykog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,6 +46,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -88,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

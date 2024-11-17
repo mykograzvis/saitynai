@@ -1,49 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\",
+  "WorkspaceRootPath": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\controllers\\operationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\controllers\\operationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\data\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\data\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\data\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\data\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\data\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\data\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\data\\hospitaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\data\\hospitaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\controllers\\operationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\controllers\\operationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\data\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\data\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\data\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\data\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\data\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\data\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\data\\hospitaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\data\\hospitaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\auth\\authendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\auth\\authendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\auth\\model\\forumroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\auth\\model\\forumroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\auth\\jwttokenservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\auth\\jwttokenservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\auth\\model\\forumrestuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\auth\\model\\forumrestuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\migrations\\20241117085046_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\migrations\\20241117085046_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\mykog\\desktop\\4kursas\\saitynai\\ligonine\\ligonine\\ligonine\\migrations\\20241013180235_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|c:\\users\\msi\\documents\\github\\saitynai\\ligonine\\ligonine\\ligonine\\migrations\\20241013180235_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{357BE3F0-B674-4934-B518-276D825110D4}|Ligonine\\Ligonine.csproj|solutionrelative:ligonine\\migrations\\20241013180235_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -54,140 +74,215 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "20241013180235_Init.cs",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Migrations\\20241013180235_Init.cs",
-              "RelativeDocumentMoniker": "Ligonine\\Migrations\\20241013180235_Init.cs",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Migrations\\20241013180235_Init.cs",
-              "RelativeToolTip": "Ligonine\\Migrations\\20241013180235_Init.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "ForumRoles.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Auth\\Model\\ForumRoles.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Auth\\Model\\ForumRoles.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Auth\\Model\\ForumRoles.cs",
+              "RelativeToolTip": "Ligonine\\Auth\\Model\\ForumRoles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T18:02:36.112Z"
+              "WhenOpened": "2024-11-17T09:26:12.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Auth\\AuthEndpoints.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Auth\\AuthEndpoints.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Auth\\AuthEndpoints.cs",
+              "RelativeToolTip": "Ligonine\\Auth\\AuthEndpoints.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T09:11:36.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "JwtTokenServices.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Auth\\JwtTokenServices.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Auth\\JwtTokenServices.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Auth\\JwtTokenServices.cs",
+              "RelativeToolTip": "Ligonine\\Auth\\JwtTokenServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T08:54:36.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20241117085046_Identity.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Migrations\\20241117085046_Identity.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Migrations\\20241117085046_Identity.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Migrations\\20241117085046_Identity.cs",
+              "RelativeToolTip": "Ligonine\\Migrations\\20241117085046_Identity.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAgwCIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T08:50:46.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ForumRestUser.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Auth\\Model\\ForumRestUser.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Auth\\Model\\ForumRestUser.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Auth\\Model\\ForumRestUser.cs",
+              "RelativeToolTip": "Ligonine\\Auth\\Model\\ForumRestUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T08:22:08.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Operation.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Operation.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Data\\Models\\Operation.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Operation.cs",
+              "RelativeToolTip": "Ligonine\\Data\\Models\\Operation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T17:37:20.226Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Operation.cs",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Operation.cs",
-              "RelativeDocumentMoniker": "Ligonine\\Data\\Models\\Operation.cs",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Operation.cs",
-              "RelativeToolTip": "Ligonine\\Data\\Models\\Operation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T17:37:20.226Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "DoctorsController.cs",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\DoctorsController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\DoctorsController.cs",
               "RelativeDocumentMoniker": "Ligonine\\Controllers\\DoctorsController.cs",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\DoctorsController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\DoctorsController.cs",
               "RelativeToolTip": "Ligonine\\Controllers\\DoctorsController.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAqwE8AAAAsAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T21:51:12.991Z"
+              "WhenOpened": "2024-10-05T21:51:12.991Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "OperationsController.cs",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\OperationsController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\OperationsController.cs",
               "RelativeDocumentMoniker": "Ligonine\\Controllers\\OperationsController.cs",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\OperationsController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\OperationsController.cs",
               "RelativeToolTip": "Ligonine\\Controllers\\OperationsController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAmwFwAAAAkAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T21:52:34.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Department.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Department.cs",
               "RelativeDocumentMoniker": "Ligonine\\Data\\Models\\Department.cs",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Department.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Department.cs",
               "RelativeToolTip": "Ligonine\\Data\\Models\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T18:06:48.306Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Doctor.cs",
-              "RelativeDocumentMoniker": "Ligonine\\Data\\Models\\Doctor.cs",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Doctor.cs",
-              "RelativeToolTip": "Ligonine\\Data\\Models\\Doctor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T18:06:49.825Z"
+              "WhenOpened": "2024-10-05T18:06:48.306Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Data\\Models\\Doctor.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\Models\\Doctor.cs",
+              "RelativeToolTip": "Ligonine\\Data\\Models\\Doctor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T18:06:49.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DepartmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\DepartmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\DepartmentsController.cs",
               "RelativeDocumentMoniker": "Ligonine\\Controllers\\DepartmentsController.cs",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\DepartmentsController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Controllers\\DepartmentsController.cs",
               "RelativeToolTip": "Ligonine\\Controllers\\DepartmentsController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAmwDIAAAAiAAAAAAAAAA==",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAFYAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T18:09:15.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HospitalDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\HospitalDbContext.cs",
-              "RelativeDocumentMoniker": "Ligonine\\Data\\HospitalDbContext.cs",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\HospitalDbContext.cs",
-              "RelativeToolTip": "Ligonine\\Data\\HospitalDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T17:09:58.532Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Program.cs",
-              "RelativeDocumentMoniker": "Ligonine\\Program.cs",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Program.cs",
-              "RelativeToolTip": "Ligonine\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T17:15:06.682Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\appsettings.json",
-              "RelativeDocumentMoniker": "Ligonine\\appsettings.json",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\appsettings.json",
-              "RelativeToolTip": "Ligonine\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-05T17:14:39.531Z"
+              "WhenOpened": "2024-10-05T18:09:15.459Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Ligonine\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\mykog\\Desktop\\4kursas\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Ligonine\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Title": "HospitalDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\HospitalDbContext.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Data\\HospitalDbContext.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Data\\HospitalDbContext.cs",
+              "RelativeToolTip": "Ligonine\\Data\\HospitalDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T17:09:58.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Program.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Program.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Program.cs",
+              "RelativeToolTip": "Ligonine\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T17:15:06.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20241013180235_Init.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Migrations\\20241013180235_Init.cs",
+              "RelativeDocumentMoniker": "Ligonine\\Migrations\\20241013180235_Init.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Migrations\\20241013180235_Init.cs",
+              "RelativeToolTip": "Ligonine\\Migrations\\20241013180235_Init.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T18:02:36.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\appsettings.json",
+              "RelativeDocumentMoniker": "Ligonine\\appsettings.json",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\appsettings.json",
+              "RelativeToolTip": "Ligonine\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-05T23:38:52.648Z"
+              "WhenOpened": "2024-10-05T17:14:39.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Ligonine\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Ligonine\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-05T23:38:52.648Z",
+              "EditorCaption": ""
             }
           ]
         }

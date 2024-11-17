@@ -1,9 +1,11 @@
-﻿using Ligonine.Data.Models;
+﻿using Ligonine.Auth.Model;
+using Ligonine.Data.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ligonine.Data
 {
-    public class HospitalDbContext : DbContext
+    public class HospitalDbContext : IdentityDbContext<ForumRestUser>
     {
         public HospitalDbContext(DbContextOptions<HospitalDbContext> options) : base(options) { }
 
