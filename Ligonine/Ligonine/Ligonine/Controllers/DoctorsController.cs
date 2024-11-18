@@ -151,6 +151,7 @@ namespace Ligonine.Controllers
 
         // DELETE: api/departments/{departmentId}/doctors/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = $"{ForumRoles.Admin},{ForumRoles.Doctor}")]
         public async Task<IActionResult> DeleteDoctor(int departmentId, int id)
         {
             var department = await _context.Departments.FindAsync(departmentId);
@@ -164,6 +165,18 @@ namespace Ligonine.Controllers
             if (doctor == null)
             {
                 return NotFound("Doctor not found in this department");
+            }
+
+            var userId = User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub)?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User ID not found in the token.");
+            }
+
+            var isAdmin = User.IsInRole(ForumRoles.Admin);
+            if (doctor.UserId != userId && !isAdmin)
+            {
+                return BadRequest("Can not delete other doctor");
             }
 
             _context.Doctors.Remove(doctor);
