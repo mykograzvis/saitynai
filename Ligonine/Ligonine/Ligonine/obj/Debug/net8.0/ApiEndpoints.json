@@ -1,5 +1,65 @@
 [
   {
+    "ContainingType": "Ligonine.Auth.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CAddAuthApi\u003Eb__0_3",
+    "RelativePath": "api/accessToken",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Ligonine.Auth.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CAddAuthApi\u003Eb__0_0",
+    "RelativePath": "api/accounts",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Ligonine.Auth.AuthEndpoints\u002BRegisterUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Ligonine.Auth.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CAddAuthApi\u003Eb__0_2",
+    "RelativePath": "api/addDoctorRole",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Ligonine.Auth.AuthEndpoints\u002BAddDoctorRole",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Ligonine.Controllers.DepartmentsController",
     "Method": "GetDepartments",
     "RelativePath": "api/Departments",
@@ -28,8 +88,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "department",
-        "Type": "Ligonine.Data.Models.Department",
+        "Name": "departmentDto",
+        "Type": "Ligonine.Controllers.DepartmentsController\u002BDepartmentDto",
         "IsRequired": true
       }
     ],
@@ -85,8 +145,8 @@
         "IsRequired": true
       },
       {
-        "Name": "doctor",
-        "Type": "Ligonine.Data.Models.Doctor",
+        "Name": "doctorDto",
+        "Type": "Ligonine.Controllers.DoctorsController\u002BDoctorDto",
         "IsRequired": true
       }
     ],
@@ -152,8 +212,8 @@
         "IsRequired": true
       },
       {
-        "Name": "operation",
-        "Type": "Ligonine.Data.Models.Operation",
+        "Name": "operationDto",
+        "Type": "Ligonine.Controllers.OperationsController\u002BOperationDto",
         "IsRequired": true
       }
     ],
@@ -229,8 +289,8 @@
         "IsRequired": true
       },
       {
-        "Name": "operation",
-        "Type": "Ligonine.Data.Models.Operation",
+        "Name": "operationDto",
+        "Type": "Ligonine.Controllers.OperationsController\u002BOperationDto",
         "IsRequired": true
       }
     ],
@@ -312,8 +372,8 @@
         "IsRequired": true
       },
       {
-        "Name": "doctor",
-        "Type": "Ligonine.Data.Models.Doctor",
+        "Name": "doctorDto",
+        "Type": "Ligonine.Controllers.DoctorsController\u002BDoctorDto",
         "IsRequired": true
       }
     ],
@@ -380,8 +440,8 @@
         "IsRequired": true
       },
       {
-        "Name": "department",
-        "Type": "Ligonine.Data.Models.Department",
+        "Name": "departmentDto",
+        "Type": "Ligonine.Controllers.DepartmentsController\u002BDepartmentDto",
         "IsRequired": true
       }
     ],
@@ -402,5 +462,43 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ligonine.Auth.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CAddAuthApi\u003Eb__0_1",
+    "RelativePath": "api/login",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Ligonine.Auth.AuthEndpoints\u002BLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Ligonine.Auth.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CAddAuthApi\u003Eb__0_4",
+    "RelativePath": "api/logout",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

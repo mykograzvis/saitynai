@@ -6,32 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Ligonine.Migrations
 {
     /// <inheritdoc />
-    public partial class Identity : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "UserId",
-                table: "Operations",
-                type: "nvarchar(450)",
-                nullable: false,
-                defaultValue: "");
-
-            migrationBuilder.AddColumn<string>(
-                name: "UserId",
-                table: "Doctors",
-                type: "nvarchar(450)",
-                nullable: false,
-                defaultValue: "");
-
-            migrationBuilder.AddColumn<string>(
-                name: "UserId",
-                table: "Departments",
-                type: "nvarchar(450)",
-                nullable: false,
-                defaultValue: "");
-
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -177,20 +156,71 @@ namespace Ligonine.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Operations_UserId",
-                table: "Operations",
-                column: "UserId");
+            migrationBuilder.CreateTable(
+                name: "Departments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Departments", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Departments_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Doctors_UserId",
-                table: "Doctors",
-                column: "UserId");
+            migrationBuilder.CreateTable(
+                name: "Doctors",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Age = table.Column<int>(type: "int", nullable: false),
+                    BloodType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DepartmentId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Doctors", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Doctors_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Departments_UserId",
-                table: "Departments",
-                column: "UserId");
+            migrationBuilder.CreateTable(
+                name: "Operations",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DoctorId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Operations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Operations_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -231,46 +261,25 @@ namespace Ligonine.Migrations
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_Departments_AspNetUsers_UserId",
+            migrationBuilder.CreateIndex(
+                name: "IX_Departments_UserId",
                 table: "Departments",
-                column: "UserId",
-                principalTable: "AspNetUsers",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                column: "UserId");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_Doctors_AspNetUsers_UserId",
+            migrationBuilder.CreateIndex(
+                name: "IX_Doctors_UserId",
                 table: "Doctors",
-                column: "UserId",
-                principalTable: "AspNetUsers",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                column: "UserId");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_Operations_AspNetUsers_UserId",
+            migrationBuilder.CreateIndex(
+                name: "IX_Operations_UserId",
                 table: "Operations",
-                column: "UserId",
-                principalTable: "AspNetUsers",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                column: "UserId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Departments_AspNetUsers_UserId",
-                table: "Departments");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Doctors_AspNetUsers_UserId",
-                table: "Doctors");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Operations_AspNetUsers_UserId",
-                table: "Operations");
-
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -287,34 +296,19 @@ namespace Ligonine.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Departments");
+
+            migrationBuilder.DropTable(
+                name: "Doctors");
+
+            migrationBuilder.DropTable(
+                name: "Operations");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Operations_UserId",
-                table: "Operations");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Doctors_UserId",
-                table: "Doctors");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Departments_UserId",
-                table: "Departments");
-
-            migrationBuilder.DropColumn(
-                name: "UserId",
-                table: "Operations");
-
-            migrationBuilder.DropColumn(
-                name: "UserId",
-                table: "Doctors");
-
-            migrationBuilder.DropColumn(
-                name: "UserId",
-                table: "Departments");
         }
     }
 }

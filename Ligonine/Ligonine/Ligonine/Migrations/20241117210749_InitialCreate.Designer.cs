@@ -4,6 +4,7 @@ using Ligonine.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ligonine.Migrations
 {
     [DbContext(typeof(HospitalDbContext))]
-    partial class HospitalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241117210749_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -177,36 +180,6 @@ namespace Ligonine.Migrations
                     b.ToTable("Operations");
                 });
 
-            modelBuilder.Entity("Ligonine.Data.Models.Session", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTimeOffset>("ExpiresAt")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<DateTimeOffset>("InitiatedAt")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<bool>("IsRevoked")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastRefreshToken")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Sessions");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -363,17 +336,6 @@ namespace Ligonine.Migrations
                 });
 
             modelBuilder.Entity("Ligonine.Data.Models.Operation", b =>
-                {
-                    b.HasOne("Ligonine.Auth.Model.ForumRestUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Ligonine.Data.Models.Session", b =>
                 {
                     b.HasOne("Ligonine.Auth.Model.ForumRestUser", "User")
                         .WithMany()

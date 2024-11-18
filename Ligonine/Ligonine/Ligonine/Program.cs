@@ -1,3 +1,4 @@
+using Ligonine.Auth;
 using Ligonine.Auth.Model;
 using Ligonine.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -30,9 +31,18 @@ builder.Services.AddAuthentication(option =>
     });
 
 builder.Services.AddAuthorization();
+builder.Services.AddTransient<JwtTokenServices>();
+builder.Services.AddTransient<SessionService>();
+builder.Services.AddScoped<AuthSeeder>();
 
 var app = builder.Build();
 
+using var scope = app.Services.CreateScope();
+//var dbContext = scope.ServiceProvider.GetRequiredService<HospitalDbContext>();
+var dbSeeder = scope.ServiceProvider.GetRequiredService<AuthSeeder>();
+await dbSeeder.SeedAsync();
+
+app.AddAuthApi();
 app.UseAuthorization();
 app.UseRouting();
 app.UseAuthentication();

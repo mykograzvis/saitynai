@@ -12,6 +12,7 @@ namespace Ligonine.Data
         public DbSet<Department> Departments { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Operation> Operations { get; set; }
+        public DbSet<Session> Sessions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

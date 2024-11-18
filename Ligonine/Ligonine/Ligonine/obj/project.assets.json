@@ -8777,19 +8777,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MSI\\.nuget\\packages\\": {}
+    "C:\\Users\\Myka\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj",
+      "projectUniqueName": "C:\\Users\\Myka\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj",
       "projectName": "Ligonine",
-      "projectPath": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj",
-      "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MSI\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\obj\\",
+      "projectPath": "C:\\Users\\Myka\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\Ligonine.csproj",
+      "packagesPath": "C:\\Users\\Myka\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Myka\\Documents\\GitHub\\saitynai\\Ligonine\\Ligonine\\Ligonine\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Myka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8875,7 +8880,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

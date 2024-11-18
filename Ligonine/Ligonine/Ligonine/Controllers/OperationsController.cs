@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Ligonine.Data;
 using Ligonine.Data.Models;
+using Ligonine.Auth.Model;
+using Microsoft.AspNetCore.Authorization;
+using static Ligonine.Controllers.DoctorsController;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Ligonine.Controllers
 {
@@ -61,9 +65,9 @@ namespace Ligonine.Controllers
 
         // PUT: api/departments/{departmentId}/doctors/{doctorId}/operations/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutOperation(int departmentId, int doctorId, int id, Operation operation)
+        [Authorize(Roles = $"{ForumRoles.Admin},{ForumRoles.Doctor}")]
+        public async Task<IActionResult> PutOperation(int departmentId, int doctorId, int id, OperationDto operationDto)
         {
-            // Find the doctor by ID and ensure they belong to the specified department
             var doctor = await _context.Doctors
                 .FirstOrDefaultAsync(d => d.Id == doctorId && d.DepartmentId == departmentId);
             if (doctor == null)
@@ -71,7 +75,6 @@ namespace Ligonine.Controllers
                 return BadRequest("Invalid Doctor ID or Doctor not in this department");
             }
 
-            // Find the operation by ID and ensure it belongs to the correct doctor
             var existingOperation = await _context.Operations
                 .FirstOrDefaultAsync(o => o.Id == id && o.DoctorId == doctorId);
             if (existingOperation == null)
@@ -79,10 +82,15 @@ namespace Ligonine.Controllers
                 return NotFound("Operation not found for this doctor");
             }
 
-            // Update the operation's properties with the new data
-            existingOperation.Name = operation.Name;
-            existingOperation.Description = operation.Description;
-            // Update other properties as needed, e.g., existingOperation.Duration = operation.Duration;
+            var isAdmin = User.IsInRole(ForumRoles.Admin);
+            var userId = User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub)?.Value;
+            if (!isAdmin && userId != doctor.UserId)
+            {
+                return BadRequest("You can not change other doctors operations");
+            }
+
+            existingOperation.Name = operationDto.Name;
+            existingOperation.Description = operationDto.Description;
 
             try
             {
@@ -106,7 +114,8 @@ namespace Ligonine.Controllers
 
         // POST: api/departments/{departmentId}/doctors/{doctorId}/operations
         [HttpPost]
-        public async Task<ActionResult<Operation>> PostOperation(int departmentId, int doctorId, Operation operation)
+        [Authorize(Roles = $"{ForumRoles.Admin},{ForumRoles.Doctor}")]
+        public async Task<ActionResult<Operation>> PostOperation(int departmentId, int doctorId, OperationDto operationDto)
         {
             var doctor = await _context.Doctors
                 .FirstOrDefaultAsync(d => d.Id == doctorId && d.DepartmentId == departmentId);
@@ -115,7 +124,26 @@ namespace Ligonine.Controllers
                 return BadRequest("Invalid Doctor ID or Doctor not in this department");
             }
 
-            operation.DoctorId = doctorId;
+            var userId = User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub)?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User ID not found in the token.");
+            }
+
+            var isAdmin = User.IsInRole(ForumRoles.Admin);
+            if (doctor.UserId != userId && !isAdmin)
+            {
+                return BadRequest("You can not create opperations for other doctors. Only Admins can create other doctors operations.");
+            }
+
+            var operation = new Operation
+            {
+                Name = operationDto.Name,
+                Description = operationDto.Description,
+                DoctorId = doctorId,
+                UserId = userId,
+            };
+
             _context.Operations.Add(operation);
             await _context.SaveChangesAsync();
 
@@ -151,5 +179,7 @@ namespace Ligonine.Controllers
             return _context.Operations.Any(e => e.Id == id && e.DoctorId == doctorId &&
                                                 _context.Doctors.Any(d => d.Id == doctorId && d.DepartmentId == departmentId));
         }
+
+        public record OperationDto(string Name, string Description);
     }
 }

@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Ligonine.Data;
 using Ligonine.Data.Models;
+using Ligonine.Auth.Model;
+using Microsoft.AspNetCore.Authorization;
+using System.IdentityModel.Tokens.Jwt;
+using static Ligonine.Controllers.DepartmentsController;
 
 namespace Ligonine.Controllers
 {
@@ -45,7 +49,8 @@ namespace Ligonine.Controllers
         // PUT: api/Departments/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDepartment(int id, Department department)
+        [Authorize(Roles = ForumRoles.Admin)]
+        public async Task<IActionResult> PutDepartment(int id, DepartmentDto departmentDto)
         {
             // Find the existing department by ID
             var existingDepartment = await _context.Departments.FindAsync(id);
@@ -56,8 +61,8 @@ namespace Ligonine.Controllers
             }
 
             // Update the properties of the existing department with the new data
-            existingDepartment.Name = department.Name;
-            existingDepartment.Description = department.Description;
+            existingDepartment.Name = departmentDto.Name;
+            existingDepartment.Description = departmentDto.Description;
 
             try
             {
@@ -82,8 +87,21 @@ namespace Ligonine.Controllers
         // POST: api/Departments
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Department>> PostDepartment(Department department)
+        [Authorize(Roles = ForumRoles.Admin)]
+        public async Task<ActionResult<Department>> PostDepartment(DepartmentDto departmentDto)
         {
+            var userId = User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub)?.Value;
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User ID not found in the token.");
+            }
+            var department = new Department
+            {
+                Name = departmentDto.Name,
+                Description = departmentDto.Description,
+                UserId = userId
+            };
             _context.Departments.Add(department);
             await _context.SaveChangesAsync();
 
@@ -110,5 +128,7 @@ namespace Ligonine.Controllers
         {
             return _context.Departments.Any(e => e.Id == id);
         }
+
+        public record DepartmentDto(string Name, string Description);
     }
 }

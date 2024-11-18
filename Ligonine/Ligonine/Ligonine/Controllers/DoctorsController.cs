@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Ligonine.Data;
 using Ligonine.Data.Models;
+using Ligonine.Auth.Model;
+using Microsoft.AspNetCore.Authorization;
+using static Ligonine.Controllers.DepartmentsController;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Ligonine.Controllers
 {
@@ -59,27 +63,31 @@ namespace Ligonine.Controllers
 
         // PUT: api/departments/{departmentId}/doctors/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDoctor(int departmentId, int id, Doctor doctor)
+        [Authorize(Roles = $"{ForumRoles.Admin},{ForumRoles.Doctor}")]
+        public async Task<IActionResult> PutDoctor(int departmentId, int id, DoctorDto doctorDto)
         {
-            // Find the department by ID
             var department = await _context.Departments.FindAsync(departmentId);
             if (department == null)
             {
                 return BadRequest("Invalid Department ID");
             }
 
-            // Find the doctor by ID and ensure they belong to the specified department
             var existingDoctor = await _context.Doctors.FirstOrDefaultAsync(d => d.Id == id && d.DepartmentId == departmentId);
             if (existingDoctor == null)
             {
                 return NotFound("Doctor not found in this department");
             }
 
-            // Update the doctor's properties with the new data
-            existingDoctor.Name = doctor.Name;
-            existingDoctor.Age = doctor.Age;
-            existingDoctor.BloodType = doctor.BloodType;
-            // Update other properties as needed, e.g., existingDoctor.YearsOfExperience = doctor.YearsOfExperience;
+            var isAdmin = User.IsInRole(ForumRoles.Admin);
+            var userId = User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub)?.Value;
+            if(!isAdmin && userId != existingDoctor.UserId)
+            {
+                return BadRequest("You can not change other doctors");
+            }
+
+            existingDoctor.Name = doctorDto.Name;
+            existingDoctor.Age = doctorDto.Age;
+            existingDoctor.BloodType = doctorDto.BloodType;
 
             try
             {
@@ -103,7 +111,8 @@ namespace Ligonine.Controllers
 
         // POST: api/departments/{departmentId}/doctors
         [HttpPost]
-        public async Task<ActionResult<Doctor>> PostDoctor(int departmentId, Doctor doctor)
+        [Authorize(Roles = $"{ForumRoles.Admin},{ForumRoles.Doctor}")]
+        public async Task<ActionResult<Doctor>> PostDoctor(int departmentId, DoctorDto doctorDto)
         {
             var department = await _context.Departments.FindAsync(departmentId);
             if (department == null)
@@ -111,7 +120,29 @@ namespace Ligonine.Controllers
                 return BadRequest("Invalid Department ID");
             }
 
-            doctor.DepartmentId = departmentId; // Ensure doctor is assigned to the department
+            var userId = User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Sub)?.Value;
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("User ID not found in the token.");
+            }
+
+            var existingDoctor = await _context.Doctors.FirstOrDefaultAsync(d => d.UserId == userId);
+
+            var isAdmin = User.IsInRole(ForumRoles.Admin);
+            if (existingDoctor != null && !isAdmin)
+            {
+                return BadRequest("You already have a doctor associated with your account. Only Admins can create additional doctors.");
+            }
+
+            var doctor = new Doctor
+            {
+                Name = doctorDto.Name,
+                Age = doctorDto.Age,
+                BloodType = doctorDto.BloodType,
+                DepartmentId = departmentId,
+                UserId = userId,
+            };
             _context.Doctors.Add(doctor);
             await _context.SaveChangesAsync();
 
@@ -146,5 +177,7 @@ namespace Ligonine.Controllers
         {
             return _context.Doctors.Any(e => e.Id == id && e.DepartmentId == departmentId);
         }
+
+        public record DoctorDto(string Name, int Age, string BloodType);
     }
 }
