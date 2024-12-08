@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ligonine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f04b097be8681e95e40fe3c45cbbd72deb098e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f4b7405eedea71bb735a3b8b8f1a1fe32c3516d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ligonine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ligonine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
