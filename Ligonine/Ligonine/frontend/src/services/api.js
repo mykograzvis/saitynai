@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'https://localhost:7199/api', // Ensure this URL is correct and matches your backend
+    baseURL: 'https://ligonine-emcvhrfngsdheshq.canadacentral-01.azurewebsites.net/api', // Ensure this URL is correct and matches your backend
 });
 
 // Add token automatically to requests if available

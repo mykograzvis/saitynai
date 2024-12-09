@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://localhost:7199/api/departments';
+const API_URL = 'https://ligonine-emcvhrfngsdheshq.canadacentral-01.azurewebsites.net/api/departments';
 
 export const operationsService = {
   async getOperations(departmentId, doctorId) {

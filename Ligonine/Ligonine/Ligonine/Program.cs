@@ -46,7 +46,57 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddEndpointsApiExplorer(); // Required for minimal APIs or endpoints
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "Hospital System API",
+        Version = "v1",
+        Description = "API documentation for the Hospital System project.",
+        Contact = new Microsoft.OpenApi.Models.OpenApiContact
+        {
+            Name = "Your Name",
+            Email = "your.email@example.com",
+        }
+    });
+
+    // Add Bearer token support in Swagger
+    options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Input your JWT token in the format: Bearer {token}",
+    });
+
+    options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] { }
+        }
+    });
+});
+
 var app = builder.Build();
+
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Hospital System API v1");
+        options.RoutePrefix = ""; // Swagger UI available at the root URL
+    });
+
 
 using var scope = app.Services.CreateScope();
 //var dbContext = scope.ServiceProvider.GetRequiredService<HospitalDbContext>();
@@ -55,7 +105,6 @@ await dbSeeder.SeedAsync();
 
 app.UseCors("AllowAll");
 app.AddAuthApi();
-app.UseAuthorization();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
